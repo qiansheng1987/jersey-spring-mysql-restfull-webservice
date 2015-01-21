@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<section name="DAO">
+		<entry key="com.erkobridee.restful.bookmarks.jerseyspring.persistence.dao.hibernate" 
+		value="com.erkobridee.restful.bookmarks.jerseyspring.persistence.dao.hibernate" />
+		<entry key="com.erkobridee.restful.bookmarks.jerseyspring.persistence.dao.hibernate" 
+		value="com.erkobridee.restful.bookmarks.jerseyspring.persistence.dao.hibernate" />
+	</section>
+</configuration>

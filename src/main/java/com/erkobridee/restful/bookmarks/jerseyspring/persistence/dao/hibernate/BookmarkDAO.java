@@ -1,5 +1,6 @@
 package com.erkobridee.restful.bookmarks.jerseyspring.persistence.dao.hibernate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Repository;
 import com.erkobridee.restful.bookmarks.jerseyspring.persistence.dao.IBookmarkDAO;
 import com.erkobridee.restful.bookmarks.jerseyspring.persistence.entity.Bookmark;
 import com.erkobridee.restful.bookmarks.jerseyspring.persistence.entity.ResultData;
+import com.erkobridee.restful.bookmarks.jerseyspring.persistence.entity.TabSysright;
 
 @Repository("bookmarkDAO")
 public class BookmarkDAO extends HibernateDaoSupport implements IBookmarkDAO {
@@ -134,6 +136,37 @@ public class BookmarkDAO extends HibernateDaoSupport implements IBookmarkDAO {
 		return new ResultData<List<Bookmark>>( c.list(), this.count(), page, size );
 		
 	}
+	
+	@SuppressWarnings("unchecked")
+	public List<TabSysright> listSysRight( int page, int size ) {
+		
+		log.debug( "list [ page: " + page + " | size: " + size + " ]" );
+		
+		/*Criteria c = super.getSession().createCriteria( TabSysright.class );
+		
+		if( size == 0 ) {
+			
+			size = 10;
+			
+		}
+		
+		c.setMaxResults( size );
+		
+		if( page > 1 ) {
+			
+			c.setFirstResult( ( page-1 ) * size );
+			
+		} else {
+			
+			c.setFirstResult( 0 );
+			
+		}
+		
+		return new ResultData<List<TabSysright>>( c.list(), this.count(), page, size );*/
+		List<TabSysright> list = super.getHibernateTemplate().find("from TabSysright");
+		return list;
+		
+	}
 
 	public Bookmark findById( Long id ) {
 		
@@ -216,5 +249,5 @@ public class BookmarkDAO extends HibernateDaoSupport implements IBookmarkDAO {
 		return flag;
 		
 	}
-
+	
 }

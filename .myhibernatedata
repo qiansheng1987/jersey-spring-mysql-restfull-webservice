@@ -1,0 +1,24 @@
+#MyEclipse Hibernate Properties
+#Wed Jan 21 10:23:03 CST 2015
+sessionFactoryName=com.jpahibernate.hibernateSession.HibernateSessionFactory
+genBasicCompId=true
+profile=
+daoSFId=
+version=3.3
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+libInstallFolder=lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=true
+reSettingsFile=/restful-bookmarks-jerseyspring/hibernate.reveng.xml
+configFile=/restful-bookmarks-jerseyspring/src/main/java/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true

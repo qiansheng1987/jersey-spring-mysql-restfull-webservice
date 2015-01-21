@@ -63,11 +63,11 @@ public class Bookmark implements Serializable {
 		this.description = description;
 	}
 
+	@XmlAttribute(name = "url")
 	public String getUrl() {
 		return url;
 	}
 
-	@XmlAttribute(name = "url")
 	public void setUrl(String url) {
 		this.url = url;
 	}

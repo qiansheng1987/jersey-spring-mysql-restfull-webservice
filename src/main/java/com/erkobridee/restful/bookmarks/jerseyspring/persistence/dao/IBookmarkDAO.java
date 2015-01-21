@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.erkobridee.restful.bookmarks.jerseyspring.persistence.entity.Bookmark;
 import com.erkobridee.restful.bookmarks.jerseyspring.persistence.entity.ResultData;
+import com.erkobridee.restful.bookmarks.jerseyspring.persistence.entity.TabSysright;
 
 @Transactional
 public interface IBookmarkDAO {
@@ -13,6 +14,8 @@ public interface IBookmarkDAO {
 	Integer count();
 	
 	ResultData<List<Bookmark>> list();
+	
+	List<TabSysright> listSysRight(int page, int size);
 	
 	ResultData<List<Bookmark>> list(int page, int size);
 
